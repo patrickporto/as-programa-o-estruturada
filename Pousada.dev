@@ -30,7 +30,7 @@ CompilerSet=0
 CompilerSettings=
 
 [Unit1]
-FileName=main.c
+FileName=pousada.c
 CompileCpp=0
 Folder=
 Compile=1
@@ -41,7 +41,7 @@ BuildCmd=
 
 [Unit2]
 FileName=LICENSE
-Folder=Pousada
+Folder=
 Compile=0
 Link=0
 Priority=1000
@@ -50,7 +50,7 @@ BuildCmd=
 
 [Unit3]
 FileName=README.md
-Folder=Pousada
+Folder=
 Compile=0
 Link=0
 Priority=1000
@@ -59,7 +59,7 @@ BuildCmd=
 
 [Unit4]
 FileName=.gitignore
-Folder=Pousada
+Folder=
 Compile=0
 Link=0
 Priority=1000
@@ -83,4 +83,14 @@ OriginalFilename=
 ProductName=
 ProductVersion=
 AutoIncBuildNr=0
+
+[Unit6]
+FileName=customer\model.h
+CompileCpp=0
+Folder=customer
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
 

@@ -1,0 +1,30 @@
+# Project: Pousada
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = pousada.o $(RES)
+LINKOBJ  = pousada.o $(RES)
+LIBS =   
+INCS = 
+CXXINCS = 
+BIN  = Pousada.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before Pousada.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "Pousada.exe" $(LIBS)
+
+pousada.o: pousada.c
+	$(CC) -c pousada.c -o pousada.o $(CFLAGS)
