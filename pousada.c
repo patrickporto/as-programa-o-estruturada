@@ -27,9 +27,9 @@ void carga (struct Cliente * clientes) {
      
      for (i = 0;i < 1; ++i) {
          printf("Digite o nome do cliente: ");
-         scanf("%s", &clientes[i].nome);
+         gets(&clientes[i].nome);
          printf("Digite o endereço do cliente: ");
-         scanf("%s", &clientes[i].endereco);
+         gets(&clientes[i].endereco);
          printf("Digite o número de dias de hospedagem:");
          scanf("%i", &diasHospedado);
             
