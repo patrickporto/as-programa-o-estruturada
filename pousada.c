@@ -2,7 +2,7 @@
 #include <locale.h>
 #include <stdlib.h>
 
-#define NUM_CLIENTES 2
+#define NUM_CLIENTES 10
 
 struct Cliente {
 	char nome[80];
@@ -30,9 +30,9 @@ void carga (struct Cliente * clientes) {
      for (i = 0;i < NUM_CLIENTES; ++i) {
          printf("Digite o nome do cliente: ");
          gets(&clientes[i].nome);
-         printf("Digite o endereço do cliente: ");
+         printf("Digite o endereï¿½o do cliente: ");
          gets(&clientes[i].endereco);
-         printf("Digite o número de dias de hospedagem:");
+         printf("Digite o nï¿½mero de dias de hospedagem:");
          scanf("%i", &diasHospedado);
          getc(stdin);
          clientes[i].diasHospedado = diasHospedado;
@@ -44,7 +44,7 @@ void gravarDados (struct Cliente clientes[]) {
      FILE *file;
      file = fopen("dados", "wb");
      if (file == NULL) {
-        printf("Problemas na gravação dos dados");
+        printf("Problemas na gravaï¿½ï¿½o dos dados");
         return;
      }
      fseek(file, 0, SEEK_SET);
@@ -64,7 +64,7 @@ void carregarDados () {
      count = fread(&clientes[0], sizeof(struct Cliente), NUM_CLIENTES, file);
      for (i = 0; i < count; ++i) {
          printf("Nome: %s\n", clientes[i].nome);
-         printf("Endereço: %s\n", clientes[i].endereco);
+         printf("Endereï¿½o: %s\n", clientes[i].endereco);
          printf("Dias de hospedagem: %i\n", clientes[i].diasHospedado);
          printf("Valor da conta: %f\n", clientes[i].valorConta);
      }
