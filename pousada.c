@@ -1,3 +1,6 @@
+/**
+	@autor: Patrick da Silveira Porto
+*/
 #include <stdio.h>
 #include <locale.h>
 #include <stdlib.h>
@@ -29,9 +32,9 @@ void carga (struct Cliente * clientes) {
      
      for (i = 0;i < NUM_CLIENTES; ++i) {
          printf("Digite o nome do cliente: ");
-         gets(&clientes[i].nome);
+         gets(clientes[i].nome);
          printf("Digite o endere�o do cliente: ");
-         gets(&clientes[i].endereco);
+         gets(clientes[i].endereco);
          printf("Digite o n�mero de dias de hospedagem:");
          scanf("%i", &diasHospedado);
          getc(stdin);
@@ -90,6 +93,5 @@ int main(int argc, char *argv[])
     printf("Total de ganhos: R$ %.2f\n", calcGanho(clientes));
     gravarDados(clientes);
     carregarDados();
-    system("PAUSE");	
     return 0;
 }
